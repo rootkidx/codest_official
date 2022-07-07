@@ -3,10 +3,10 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    const hideNav =document.querySelector("body");
+    // const hideNav =document.querySelector("body");
    
 //toggle nav
-    burger.addEventListener,hideNav.addEventListener('click', () => {
+    burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
 
     
@@ -47,5 +47,23 @@ navSlide();
 // }
 // counterContainer.innerHTML = visitCount;
 
+
+
+let themeToggler = document.querySelector(".theme-toggler");
+let state = 0;
+themeToggler.onclick = () => {
+    
+  themeToggler.classList.toggle('active');
+
+  if(themeToggler.classList.contains('active') , state == 0){
+    document.body.classList.add('active');
+    state = 1;
+    
+  }else{
+    document.body.classList.remove('active');
+    state = 0;
+  }
+  console.log(state);
+}
 
 
